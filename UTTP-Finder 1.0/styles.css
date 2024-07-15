@@ -21,11 +21,12 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   max-width: 800px;
   width: 90%;
-  text-align: center; 
+  text-align: center;
+  margin-top: 20px; /* Added margin-top for better spacing */
 }
 
 .logo {
-  width: 300px; 
+  width: 300px;
   display: block;
   margin: 0 auto 20px;
 }
@@ -144,10 +145,11 @@ button:hover::before {
 .footer p {
   font-size: 14px;
   color: #fff;
+  margin: 0; /* Added to reset default margin */
 }
 
 .discord-button {
-  width: 40px; 
+  width: 40px;
   margin-left: 10px;
   cursor: pointer;
 }
