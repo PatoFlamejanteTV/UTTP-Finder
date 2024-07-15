@@ -21,7 +21,12 @@ function fetchChannels() {
   const searchQuery = encodeURIComponent(currentKeyword);
 
   fetch(`https://www.googleapis.com/youtube/v3/search?q=${searchQuery}&part=snippet&type=channel&maxResults=${batchSize}&startIndex=${startIndex}&key=${apiKey}`)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
     .then(data => {
       const channels = data.items || [];
       totalChannels = totalChannels.concat(channels.map(channel => ({
@@ -82,3 +87,4 @@ function searchChannels(keyword) {
   totalChannels = [];
   fetchChannels();
 }
+
