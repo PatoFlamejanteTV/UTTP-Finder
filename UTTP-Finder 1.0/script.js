@@ -16,7 +16,7 @@ document.getElementById('nextButton').addEventListener('click', () => {
 });
 
 function fetchChannels() {
-  const batchSize = 50; // Fetch 50 channels at a time
+  const batchSize = 50; 
   const startIndex = totalChannels.length + 1;
   const searchQuery = encodeURIComponent(currentKeyword);
 
@@ -38,7 +38,7 @@ function fetchChannels() {
 }
 
 function displayChannels() {
-  const pageSize = 5; // Number of channels per page
+  const pageSize = 5; 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const channelsToDisplay = totalChannels.slice(startIndex, endIndex);
