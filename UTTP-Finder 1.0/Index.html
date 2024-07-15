@@ -3,24 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YouTube Channel Search</title>
+<title>UTTP-Finder</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
-  <div class="container">
-    <h1>Search YouTube Channels</h1>
+  <main class="container">
+    <img src="logo.png" alt="Logo" class="logo">
     <div class="search-buttons">
-      <button onclick="searchChannels('UTTP')">Search UTTP</button>
-      <button onclick="searchChannels('ZNTP')">Search ZNTP</button>
-      <button onclick="searchChannels('YFGA')">Search YFGA</button>
+      <button onclick="searchChannels('UTTP')" aria-label="Search UTTP" data-tooltip="Search channels related to UTTP">Search UTTP</button>
+      <button onclick="searchChannels('ZNTP')" aria-label="Search ZNTP" data-tooltip="Search channels related to ZNTP">Search ZNTP</button>
+      <button onclick="searchChannels('YFGA')" aria-label="Search YFGA" data-tooltip="Search channels related to YFGA">Search YFGA</button>
     </div>
-    <div id="results" class="results-container"></div>
+    <div id="results" class="results-container">
+      <!-- Results will be dynamically inserted here -->
+    </div>
     <div class="pagination">
       <button id="prevButton" disabled>Previous Page</button>
       <span id="currentPage">Page 1</span>
       <button id="nextButton" disabled>Next Page</button>
     </div>
-  </div>
+  </main>
+  
+  <footer class="footer">
+    <p>&copy; 2024 FusionTech Studios. All rights reserved. | Version 2.0</p>
+    <a href="https://discord.gg/Jfp6yeEqRt" target="_blank">
+      <img src="discord.png" alt="Discord" class="discord-button">
+    </a>
+  </footer>
+  
   <script src="script.js"></script>
 </body>
 </html>
