@@ -7,7 +7,7 @@ In the Google Cloud Console, navigate to APIs & Services > Credentials.
 Click on Create Credentials > API Key.
 Open Script.js and replace YOUR YOUTUBE DATA API KEY on the first line with your newly generated API key.
 You should now be ready to use the UTTP-Finder!
-If you need assistance, [join our Discord support server.](https://discord.gg/Jfp6yeEqRt)
+If you need assistance, join our [Discord support server.](https://discord.gg/Jfp6yeEqRt)
 
 ## API Key Safety
 Your API key is like a password. Do not share it with anyone or include it in publicly accessible code repositories.
