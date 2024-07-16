@@ -12,9 +12,12 @@
   <main class="container">
     <img src="logo.png" alt="Logo" class="logo">
     <div class="search-buttons">
-      <button onclick="searchChannels('UTTP')" aria-label="Search UTTP" data-tooltip="Search channels related to UTTP">Search UTTP</button>
-      <button onclick="searchChannels('ZNTP')" aria-label="Search ZNTP" data-tooltip="Search channels related to ZNTP">Search ZNTP</button>
-      <button onclick="searchChannels('YFGA')" aria-label="Search YFGA" data-tooltip="Search channels related to YFGA">Search YFGA</button>
+      <input type=text id="key" placeholder="API key">
+      <button id="keysub" onclick="apiKey = document.getElementById('key').value">Load API key</button>
+      <br>
+      <br>
+      <input type=text id="search" placeholder="Search">
+      <button id="sbtn" aria-label="Search" data-tooltip="Search channels related to your query">Search</button>
     </div>
     <div id="results" class="results-container">
     </div>
