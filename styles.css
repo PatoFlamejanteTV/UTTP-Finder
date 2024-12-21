@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  margin-top: 20px; /* Added margin-top for better spacing */
+}
+
+.logo {
+  width: 300px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.search-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 12px;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease, border-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+button:hover::before {
+  opacity: 1;
+}
+
+.results-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.result-item {
+  margin-bottom: 20px;
+}
+
+.result-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease, border-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+#currentPage {
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #fff;
+  margin: 0; /* Added to reset default margin */
+}
+
+.discord-button {
+  width: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+}
