@@ -1,4 +1,4 @@
-var apiKey = 'YOUR YOUTUBE DATA API KEY (open readme.mb to learn how to get your data API key)';
+var apiKey = 'YOUR YOUTUBE DATA API KEY (open readme.md to learn how to get your data API key)';
 let currentPage = 1;
 let currentKeyword = '';
 let totalChannels = [];
@@ -23,7 +23,7 @@ function fetchChannels() {
   fetch(`https://www.googleapis.com/youtube/v3/search?q=${searchQuery}&part=snippet&type=channel&maxResults=${batchSize}&startIndex=${startIndex}&key=${apiKey}`)
     .then(response => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Response was not ok');
       }
       return response.json();
     })
